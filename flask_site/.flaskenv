@@ -1,0 +1,2 @@
+FLASK_APP=carbonsite.py
+export FLASK_ENV=development

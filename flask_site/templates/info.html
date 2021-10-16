@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+    <head>
+        <title>{{ title }} - Food Results</title>
+    </head>
+    <body>
+        {% for msg in get_flashed_messages() %}
+        <h4>{{ msg }}</h4>
+        {% endfor %}
+        <h1>Food Results</h1>
+        <p>You have selected to replace {{ meat }} with {{ alternative }} </p>
+        <p>This is saving {{ saving }}kg of C02! </p>
+        </form>
+    </body>
+</html>
