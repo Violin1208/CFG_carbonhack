@@ -4,20 +4,20 @@
         <title>{{ title }} - CarbonSite</title>
     </head>
     <body>
-        {% for mesg in get_flashed_messages() %}
-        <h1>{{ mesg }}</h1>
+        {% for msg in get_flashed_messages() %}
+        <h1>{{ msg }}</h1>
         {% endfor %}
-        <h1>Hello,  Deb!</h1>
+        <h1>Welcome to BWisely!</h1>
         <h1>Select food to replace</h1>
         <form action="" method="post" novalidate>
             {{ form.hidden_tag() }}
             <p>
                 {{ form.food_select.label }}<br>
-                {{ form.food_select(size=2)}}</br>
+                {{ form.food_select(size=6)}}</br>
             </p>
             <p>
                 {{ form.alternative_select.label }}<br>
-                {{ form.alternative_select(size=2)}}</br>
+                {{ form.alternative_select(size=6)}}</br>
             </p>
             <p>{{ form.submit() }}</p>
         </form>
