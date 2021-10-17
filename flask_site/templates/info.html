@@ -6,17 +6,15 @@
     <div class="container">
         <div class="text-center">
             <h2 class="section-heading text-uppercase">Food CO2 Results</h2>
-            <h3 class="section-subheading text-muted">You can start calculating to see how much you can reduce your food carbon footprint by chossing alternative food.</h3>
+            <h3 class="section-subheading text-muted">This page shows you how much you can reduce your food carbon footprint by chossing alternative food.</h3>
                 </div>
-                        <h4 class="my-3">Select Food To Replace</h4>
-                        <!--<p class="text-muted">Maybe put some text here in the future if necessary.</p>-->
                         {% for msg in get_flashed_messages() %}
-                        <h4>{{ msg }}</h4>
+                        <h4 class="my-3">{{ msg }}</h4>
                         {% endfor %}
-                        <h1>Food Results</h1>
+                        <h4>Food CO2 Saving Result</h4>
                         <p>You have selected to replace {{ meat }} with {{ alternative }} </p>
                         <p>This is saving {{ saving }}kg of C02! </p>
-                        <a href={{ url_for('index') }}>Calculate again</a>
+                        <a href={{ url_for('index', _anchor="calculator") }}>Calculate again</a>
                         </form>
                 </div>
         </div>

@@ -21,7 +21,7 @@ def index():
         meat = form.food_select.data
         alternative = form.alternative_select.data
         saving = calculate_saving(meat, alternative)
-        flash(f'Submitted choices {meat}')
+        flash(f'Submitted choice is {meat}')
         return redirect(url_for('info', meat=meat, alternative=alternative, 
                                 saving=saving))
     else:
