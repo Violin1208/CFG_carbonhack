@@ -6,6 +6,6 @@ from flask_site.static_data.food_dict import info
 class SelectForm(FlaskForm):
     meats = info.keys()
     alternatives = info.keys()
-    food_select = SelectField('Meat', choices = meats)
+    food_select = SelectField('Primary Food', choices = meats)
     alternative_select = SelectField('Alternative', choices = alternatives, validate_choice=True)
     submit = SubmitField('Submit')
