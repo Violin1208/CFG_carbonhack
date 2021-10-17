@@ -1,16 +1,25 @@
-<!doctype html>
-<html>
-    <head>
-        <title>{{ title }} - Food Results</title>
-    </head>
-    <body>
-        {% for msg in get_flashed_messages() %}
-        <h4>{{ msg }}</h4>
-        {% endfor %}
-        <h1>Food Results</h1>
-        <p>You have selected to replace {{ meat }} with {{ alternative }} </p>
-        <p>This is saving {{ saving }}kg of C02! </p>
-        <a href={{ url_for('index') }}>Calculate again</a>
-        </form>
-    </body>
-</html>
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="page-section" id="calculator_results">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">Food CO2 Results</h2>
+            <h3 class="section-subheading text-muted">You can start calculating to see how much you can reduce your food carbon footprint by chossing alternative food.</h3>
+                </div>
+                        <h4 class="my-3">Select Food To Replace</h4>
+                        <!--<p class="text-muted">Maybe put some text here in the future if necessary.</p>-->
+                        {% for msg in get_flashed_messages() %}
+                        <h4>{{ msg }}</h4>
+                        {% endfor %}
+                        <h1>Food Results</h1>
+                        <p>You have selected to replace {{ meat }} with {{ alternative }} </p>
+                        <p>This is saving {{ saving }}kg of C02! </p>
+                        <a href={{ url_for('index') }}>Calculate again</a>
+                        </form>
+                </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
