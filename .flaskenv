@@ -1,0 +1,3 @@
+FLASK_APP=carbon_site.py
+DEBUG=True
+FLASK_DEBUG=1

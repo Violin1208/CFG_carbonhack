@@ -1,19 +1,8 @@
 from flask import Flask
+from flask_bootstrap import Bootstrap
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static')
 app.config['SECRET_KEY'] = 'you-will-never-guess'
+Bootstrap(app)
 
 from flask_site import routes
-
-# @app.route = ("/")
-# def home():
-#     return "Welcome to our xxx."
-
-# @app.route = ("/swap")
-# def swap():
-#     return "Please select the food you want to swap with."
-
-
-# if __name__ == "__main__":
-#     app.run(debug=True)
-    
