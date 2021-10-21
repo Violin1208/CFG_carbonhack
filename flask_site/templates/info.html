@@ -5,13 +5,18 @@
 <section class="page-section" id="calculator_results">
     <div class="container">
         <div class="text-center">
-            <h2 class="section-heading text-uppercase">Food CO2 Results</h2>
-            <h3 class="section-subheading text-muted">This page shows you how much you can reduce your food carbon footprint by choosing an alternative ingredient.</h3>
+            <h2 class="section-heading text-uppercase">Food Swap Results</h2>
+            <h5 class="section-subheading text-muted">This page shows you how much you can reduce your food carbon footprint by choosing an alternative ingredient</h5><br>
                 </div>
                         {% for msg in get_flashed_messages() %}
                         <h4 class="my-3">{{ msg }}</h4>
                         {% endfor %}
                         <h4>Food CO2 Saving Result</h4>
+            <p>
+        {{ form.food1_select.label }}<br>
+        {{ form.food1_select(size=6)}}
+    </p>
+    <p>{{ form.submit() }}</p>
                         <p>You have selected to replace {{ meat }} with {{ alternative }} </p>
                         <p>Great Choice! This is saving you {{ saving }}kg of C02! That's equivalent to </p>
                         <a href={{ url_for('index', _anchor="calculator") }}>Calculate again</a>

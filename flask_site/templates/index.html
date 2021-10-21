@@ -7,7 +7,7 @@
             <div class="container">
                 <div class="masthead-subheading">Welcome To BeWisely!</div>
                 <div class="masthead-heading text-uppercase">Learn How To Cut Your Food Carbon Footprint!</div>
-                <a class="btn btn-primary btn-xl text-uppercase" href="#calculator">Find Out More</a>
+                <a class="btn btn-primary btn-xl text-uppercase" href="#calculator">Let's Go! </a>
             </div>
         </header>
         <!-- Calculator-->
@@ -15,9 +15,9 @@
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Calculator</h2>
-                    <h3 class="section-subheading text-muted">You can start calculating to see how much you can reduce your food carbon footprint by choosing an alternative ingredient</h3>
+                    <h5 class="section-subheading text-muted">You can start calculating to see how much you can reduce your food carbon footprint by choosing an alternative ingredient</h5>
                 </div>
-                        <h4 class="my-3">Select Food To Replace</h4>
+                        <h4 class="my-3">Select Food or Drink to replace</h4>
                         <!--<p class="text-muted">Maybe put some text here in the future if necessary.</p>-->
                         {% for msg in get_flashed_messages() %}
                         <h1>{{ msg }}</h1>
@@ -25,12 +25,14 @@
                         <form action="" method="post" novalidate>
                             {{ form.hidden_tag() }}
                             <p>
-                                {{ form.food_select.label }}<br>
-                                {{ form.food_select(size=6)}}</br>
+                                {{ form.food1_select.label }}<br>
+                                {{ form.food1_select(size=6)}}</br>
                             </p>
+                            <p>{{ form.submit() }}</p>
+                            <p><b>OR</b></p>
                             <p>
-                                {{ form.alternative_select.label }}<br>
-                                {{ form.alternative_select(size=6)}}</br>
+                                {{ form.drink1_select.label }}<br>
+                                {{ form.drink1_select(size=6)}}</br>
                             </p>
                             <p>{{ form.submit() }}</p>
                         </form>

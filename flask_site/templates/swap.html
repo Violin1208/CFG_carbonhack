@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="text-center">
+    <h2 class="section-heading text-uppercase">Food Swap Options:</h2>
+    <h5 class="section-subheading text-muted">Here you can see alternative food/drink options that would help you to reduce your food carbon footprint</h5><br>
+</div>
+{% for msg in get_flashed_messages() %}
+<h4 class="my-3">{{ msg }}</h4>
+{% endfor %}
+<h4>Food CO2 Saving Result</h4>
+<form action="" method="post" novalidate>
+    {{ form.hidden_tag() }}
+    <p>
+        {{ form.food1_select.label }}<br>
+        {{ form.food1_select(size=6)}}
+    </p>
+    <p>{{ form.submit() }}</p>
+
+    <p>You have selected to replace {{ prifood }} or {{ pridrink }} </p>
+    <p>Great Choice! This is saving you {{ saving }}kg of C02! That's equivalent to </p>
+    <a href={{ url_for('index', _anchor="calculator") }}>Calculate again
+</form>
+
+{% endblock %}
