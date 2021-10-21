@@ -11405,15 +11405,16 @@ p {
   }
 }
 header.masthead {
-  padding-top: 2rem;
-  padding-bottom: 18rem;
+  padding-top: 10.5rem;
+  padding-bottom: 6rem;
   text-align: center;
-  color: #808080;
-  background-image: url("../assets/img/bewisely logo.png");
+  color: #fff;
+  background-image: url("../assets/img/green-vegetables-1.webp");
   background-repeat: no-repeat;
   background-attachment: scroll;
-  background-position: 50% 0%;
-  background-size: 800px 600px;
+  background-position: center center;
+  background-size: cover;
+
 }
 header.masthead .masthead-subheading {
   font-size: 1.5rem;
