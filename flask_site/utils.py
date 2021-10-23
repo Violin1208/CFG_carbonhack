@@ -7,7 +7,8 @@ def calculate_saving(meat, alternative):
     meat_co2 = get_co2(meat)
     alternative_co2 = get_co2(alternative)
     try:
-        return float(meat_co2) - float(alternative_co2)
+        val = float(meat_co2) - float(alternative_co2)
+        return round(val, 2)
     except:
         flash(f'An error has occured')
         return 'Error'
